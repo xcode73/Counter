@@ -26,20 +26,33 @@
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6ax-zg-mTw">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6ax-zg-mTw">
                                         <rect key="frame" x="0.0" y="53.999999999999943" width="331" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HK-Cz-ekJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="331" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="160.66666666666666" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="d9n-Np-6jn"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="+1">
-                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="32"/>
+                                                <buttonConfiguration key="configuration" style="tinted">
+                                                    <imageReference key="image" image="plus" catalog="system" renderingMode="template"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="addButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gnx-We-daH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4e-F2-1nt">
+                                                <rect key="frame" x="170.66666666666663" y="0.0" width="160.33333333333337" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="minus" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="subtractButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VH3-ZB-Yjs"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -83,6 +96,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

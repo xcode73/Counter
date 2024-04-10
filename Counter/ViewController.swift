@@ -41,5 +41,13 @@ class ViewController: UIViewController {
         updateUI()
         print("Debug: Add button was tapped")
     }
+    
+    @IBAction func subtractButtonDidTapped(_ sender: UIButton) {
+        if counter > 0 {
+            counter -= 1
+        }
+        updateUI()
+        print("Debug: Subtract button was tapped")
+    }
 }
 
